@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TutorialEpoxy</string>
+    <string name="city">Boston</string>
+    <string name="description">America\'s beginnings etch into the earth of Boston, a traditional New England city with hungry minds and a progressive spirit. </string>
+    <string name="home_name">2 Bedroom Flat with Home Office</string>
+    <string name="home_owner">ShoMasegi</string>
+    <string name="footer_string">There are quite a few\n houseboats in Boston. Want\n to live like a fisherman?</string>
+</resources>
