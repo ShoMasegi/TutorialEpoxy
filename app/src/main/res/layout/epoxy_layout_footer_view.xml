@@ -9,8 +9,8 @@
     android:background="#CDB77C"
     android:paddingStart="20dp"
     android:paddingEnd="20dp"
-    android:paddingTop="32dp"
-    android:paddingBottom="72dp">
+    android:paddingTop="24dp"
+    android:paddingBottom="64dp">
 
     <TextView
       android:layout_width="match_parent"

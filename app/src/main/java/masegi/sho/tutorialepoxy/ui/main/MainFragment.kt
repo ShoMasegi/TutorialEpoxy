@@ -5,34 +5,41 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.airbnb.epoxy.EpoxyVisibilityTracker
 import masegi.sho.tutorialepoxy.model.City
 import masegi.sho.tutorialepoxy.model.Home
 import masegi.sho.tutorialepoxy.R
 import masegi.sho.tutorialepoxy.databinding.MainFragmentBinding
 
-class MainFragment : Fragment(), MainController.Callbacks {
+class MainFragment : Fragment() {
+
+    // MARK: - Property
 
     private lateinit var binding: MainFragmentBinding
 
-    private val controller = MainController(this)
+    private val controller = MainController()
+    private lateinit var city: City // mock
 
-    // mock
-    private lateinit var city: City
+
+    // MARK: - Fragment
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = MainFragmentBinding.inflate(inflater, container, false)
-        binding.epoxyView.setController(controller)
+        setupController()
         setupMock()
         updateController()
         return binding.root
     }
 
+
+    // MARK: - Private
+
     private fun setupMock() {
         val homes = mutableListOf<Home>()
-        for (i in 1..3) {
+        for (i in 1..6) {
             val home =
                 Home(getString(R.string.home_name), getString(R.string.home_owner), 0, 0)
             homes.add(home)
@@ -40,12 +47,21 @@ class MainFragment : Fragment(), MainController.Callbacks {
         city = City(getString(R.string.city), getString(R.string.description), homes)
     }
 
-    private fun updateController() {
-        controller.setData(city)
+    private fun setupController() {
+        binding.epoxyView.setController(controller)
+        val visibilityTracker = EpoxyVisibilityTracker()
+        visibilityTracker.attach(binding.epoxyView)
+        controller.delegate = object : MainController.Delegate {
+            override fun onLinkClick() {
+            }
+
+            override fun onHeaderViewVisibilityChanged(percentVisibleHeight: Float) {
+            }
+        }
     }
 
-    override fun onLinkClick() {
-        print("touched")
+    private fun updateController() {
+        controller.setData(city)
     }
 
     companion object {
