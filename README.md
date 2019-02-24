@@ -15,7 +15,7 @@ Please see [my blog](https://masegi.hatenablog.com/entry/2019/02/24/215211) (Jap
 
 Screen | Carousel
 :---:|:---:
-<img src="https://s3-ap-northeast-1.amazonaws.com/github.masegi/Tutorial-Epoxy/Epoxy_Scroll.gif" width="300" /> |<img src="https://s3-ap-northeast-1.amazonaws.com/github.masegi/Tutorial-Epoxy/Epoxy_Carousel.gif" width="300" /> 
+![](https://s3-ap-northeast-1.amazonaws.com/github.masegi/Tutorial-Epoxy/Epoxy_Scroll.gif) |![](https://s3-ap-northeast-1.amazonaws.com/github.masegi/Tutorial-Epoxy/Epoxy_Carousel.gif)
 ## Reference
 
 - [https://medium.com/airbnb-engineering/epoxy-airbnbs-view-architecture-on-android-c3e1af150394](https://medium.com/airbnb-engineering/epoxy-airbnbs-view-architecture-on-android-c3e1af150394)
