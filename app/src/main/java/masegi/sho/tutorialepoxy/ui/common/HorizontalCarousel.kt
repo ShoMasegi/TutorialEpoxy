@@ -1,7 +1,7 @@
 package masegi.sho.tutorialepoxy.ui.common
 
 import android.content.Context
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.airbnb.epoxy.Carousel
 import com.airbnb.epoxy.ModelView
 import com.airbnb.epoxy.ModelView.Size
@@ -14,6 +14,10 @@ class HorizontalCarousel(context: Context): Carousel(context) {
     }
 
     override fun createLayoutManager(): LayoutManager {
-        return LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        return LinearLayoutManager(
+            context,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
     }
 }

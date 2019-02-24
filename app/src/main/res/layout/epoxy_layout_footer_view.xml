@@ -20,7 +20,7 @@
       android:textSize="23sp"
       android:text="@string/footer_string"/>
 
-    <android.support.design.button.MaterialButton
+    <com.google.android.material.button.MaterialButton
       android:layout_width="wrap_content"
       android:layout_height="46dp"
       style="@style/Widget.MaterialComponents.Button.OutlinedButton"

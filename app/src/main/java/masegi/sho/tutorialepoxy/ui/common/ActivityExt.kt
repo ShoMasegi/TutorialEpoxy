@@ -1,6 +1,6 @@
 package masegi.sho.tutorialepoxy.ui.common
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 val AppCompatActivity.statusBarHeight: Int
     get() {

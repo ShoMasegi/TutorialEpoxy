@@ -10,7 +10,7 @@
         type="String"/>
   </data>
 
-  <android.support.constraint.ConstraintLayout
+  <androidx.constraintlayout.widget.ConstraintLayout
       android:id="@+id/home_header"
       android:layout_width="match_parent"
       android:background="@android:color/white"
@@ -46,6 +46,6 @@
         app:layout_constraintBottom_toBottomOf="@id/headline"
         app:layout_constraintEnd_toEndOf="parent" />
 
-  </android.support.constraint.ConstraintLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
