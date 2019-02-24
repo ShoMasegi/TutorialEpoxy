@@ -1,10 +1,12 @@
 package masegi.sho.tutorialepoxy.ui.main
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.airbnb.epoxy.EpoxyVisibilityTracker
 import masegi.sho.tutorialepoxy.model.City
 import masegi.sho.tutorialepoxy.model.Home
@@ -52,7 +54,11 @@ class MainFragment : Fragment() {
         val visibilityTracker = EpoxyVisibilityTracker()
         visibilityTracker.attach(binding.epoxyView)
         controller.delegate = object : MainController.Delegate {
-            override fun onLinkClick() {
+            @SuppressLint("ShowToast")
+            override fun onLinkClick(view: View) {
+                view.context?.let {
+                    Toast.makeText(it, "LinkRow Clicked!!", Toast.LENGTH_SHORT).show()
+                }
             }
 
             override fun onHeaderViewVisibilityChanged(percentVisibleHeight: Float) {

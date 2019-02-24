@@ -1,5 +1,6 @@
 package masegi.sho.tutorialepoxy.ui.main
 
+import android.view.View
 import com.airbnb.epoxy.Carousel
 import com.airbnb.epoxy.TypedEpoxyController
 import masegi.sho.tutorialepoxy.*
@@ -11,7 +12,7 @@ import masegi.sho.tutorialepoxy.ui.common.withModelsFrom
 class MainController internal constructor(): TypedEpoxyController<City>() {
 
     interface Delegate {
-        fun onLinkClick() {}
+        fun onLinkClick(view: View) {}
         fun onHeaderViewVisibilityChanged(percentVisibleHeight: Float) {}
     }
 
@@ -29,7 +30,7 @@ class MainController internal constructor(): TypedEpoxyController<City>() {
         }
         linkView {
             id("link view")
-            onLinkClick { _ -> delegate?.onLinkClick() }
+            onLinkClick { view -> delegate?.onLinkClick(view) }
         }
         homeHeaderView {
             id("home header view")
