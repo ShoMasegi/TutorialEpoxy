@@ -1,5 +1,7 @@
 # TutorialEpoxy
 
+![](https://img.shields.io/badge/AndroidStudio-3.4.0--beta05-brightgreen.svg) ![](https://img.shields.io/badge/Kotlin-v1.3.21-orange.svg) ![](https://img.shields.io/badge/AndroidSDK-21+-blue.svg)
+
 Sample for Airbnb/Epoxy
 
 - [https://github.com/airbnb/epoxy](https://github.com/airbnb/epoxy)
