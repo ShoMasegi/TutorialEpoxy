@@ -5,7 +5,6 @@ import com.airbnb.epoxy.Carousel
 import com.airbnb.epoxy.TypedEpoxyController
 import masegi.sho.tutorialepoxy.*
 import masegi.sho.tutorialepoxy.model.City
-import masegi.sho.tutorialepoxy.ui.common.carousel
 import masegi.sho.tutorialepoxy.ui.common.horizontalCarousel
 import masegi.sho.tutorialepoxy.ui.common.withModelsFrom
 
@@ -39,7 +38,7 @@ class MainController internal constructor(): TypedEpoxyController<City>() {
         horizontalCarousel {
             id("carousel")
             numViewsToShowOnScreen(1.05f)
-            padding(Carousel.Padding.dp(12, 0))
+            padding(Carousel.Padding.dp(20, 18))
             withModelsFrom(data.popularHomes) {
                 HomeItemBindingModel_()
                     .id(it.name)
@@ -51,10 +50,10 @@ class MainController internal constructor(): TypedEpoxyController<City>() {
             id("home header view")
             headerTitle("North End")
         }
-        carousel {
+        horizontalCarousel {
             id("carousel")
             numViewsToShowOnScreen(1.05f)
-            padding(Carousel.Padding.dp(12, 0))
+            padding(Carousel.Padding.dp(20, 18))
             withModelsFrom(data.popularHomes) {
                 HomeItemBindingModel_()
                     .id(it.name)
